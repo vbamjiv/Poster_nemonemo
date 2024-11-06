@@ -1,0 +1,161 @@
+.text {
+  position: absolute;
+  width: 500px;
+  top: 80px;
+  left: 1600px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.image-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200%;
+  max-height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+  display: none;
+  z-index: 1;
+}
+
+.bg-image1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.bg-image2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200%;
+  max-height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+  display: none;
+  z-index: 3;
+}
+
+.bg-image3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200%;
+  max-height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+  display: none;
+  z-index: 2;
+}
+
+.bg-image:first-child {
+  display: block;
+}
+
+.box {
+  width: 157px; /* 박스 크기 */
+  height: 157px; /* 박스 크기 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 110px; /* Y 좌표 */
+  left: 1500px; /* X 좌표 */
+  overflow: hidden; /* 박스 밖의 내용 숨김 */
+  z-index: 10;
+}
+
+.animated-image01 {
+  width: 157px; /* 이미지 크기 */
+  height: 157px; /* 이미지 크기 */
+  position: absolute;
+  left: 1550px; /* 최종 위치 X 좌표 */
+  top: -157px; /* 이미지가 위쪽에 숨겨지도록 설정 */
+  display: block; /* 처음부터 보이게 설정 */
+  transition: left 1s, top 1s; /* 애니메이션 효과 */
+  z-index: 10;
+
+  @keyframes motion {
+    0% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 10px;
+    }
+  }
+}
+
+.animated-image02 {
+  width: 157px; /* 이미지 크기 */
+  height: 157px; /* 이미지 크기 */
+  position: absolute;
+  left: 1720px; /* 최종 위치 X 좌표 */
+  top: -157px; /* 이미지가 위쪽에 숨겨지도록 설정 */
+  display: block; /* 처음부터 보이게 설정 */
+  transition: left 1s, top 1s; /* 애니메이션 효과 */
+  z-index: 10;
+}
+
+.animated-image03 {
+  width: 157px; /* 이미지 크기 */
+  height: 157px; /* 이미지 크기 */
+  position: absolute;
+  left: 1700px; /* 최종 위치 X 좌표 */
+  top: -157px; /* 이미지가 위쪽에 숨겨지도록 설정 */
+  display: block; /* 처음부터 보이게 설정 */
+  transition: left 1s, top 1.2s; /* 애니메이션 효과 */
+  z-index: 10;
+}
+
+.animated-image04 {
+  width: 157px; /* 이미지 크기 */
+  height: 157px; /* 이미지 크기 */
+  position: absolute;
+  left: 1870px; /* 최종 위치 X 좌표 */
+  top: -157px; /* 이미지가 위쪽에 숨겨지도록 설정 */
+  display: block; /* 처음부터 보이게 설정 */
+  transition: left 1s, top 1.2s; /* 애니메이션 효과 */
+  z-index: 10;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.image-zoom {
+  transform: scale(0); /* 초기 크기 0 */
+  opacity: 0;
+  position: absolute;
+  left: 1400px; /* 최종 위치 X 좌표 */
+  top: 100px;
+  display: block; /* 처음부터 보이게 설정 */
+  z-index: 10;
+}
+
+.start-animation {
+  animation: zoom 2s infinite; /* 2초 동안 애니메이션이 무한 반복 */
+  width: 240px; /* 이미지 크기 */
+  height: 96px;
+  opacity: 1;
+}
+
+
